@@ -2,8 +2,10 @@
   "name": "map_points",
   "version": "1.0.0",
   "description": "Kiwi map only points",
-  "main": "index.js",
+  "main": "lib/main.js",
   "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
     "babel-register": "^6.22.0",
     "immutable": "^3.8.1",
     "immutable-devtools": "0.0.7",
@@ -20,7 +22,8 @@
     "babel-preset-stage-2": "^6.22.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
