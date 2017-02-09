@@ -13,17 +13,8 @@ const MapPlaceRecord = Record({
 })
 
 export default class MapPlace extends MapPlaceRecord {
-	// id: string;
-	// lat: number;
-	// lng: number;
-	// population: number;
-	// rank: number;
-	// value: string;
-	// price: number;
-	// pricePerKm: number;
-	// distance: number;
 	
-	static fromPlainJS(plain): MapPlace {
+	static fromPlainJS(plain) {
 		return new MapPlace(plain)
 	}
 }

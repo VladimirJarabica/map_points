@@ -117,7 +117,7 @@ const mapPlacesToPoints = (mapPlaces, fromLatLngToDivPixel) => {
 	return points
 }
 
-const init = (placesIndex: MapPlacesIndex, fromLatLngToDivPixel) => (bounds, placesToSlice) => {
+const init = (placesIndex, fromLatLngToDivPixel) => (bounds, placesToSlice) => {
 	const places = placesIndex.getByBounds(flatBounds(bounds))
 	
 	const sortedPlaces = getSortedPlaces(places, placesToSlice)
