@@ -1,3 +1,10 @@
+import Immutable from "immutable"
+import installDevTools from "immutable-devtools"
+
+installDevTools(Immutable)
+
+import 'whatwg-fetch'
+
 import placesStoreInit from "./places/index"
 import placesIndexInit from "./placesIndex/index"
 import pointsInit from "./points/index"
