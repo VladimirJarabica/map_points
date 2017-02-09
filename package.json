@@ -2,7 +2,7 @@
   "name": "map_points",
   "version": "1.0.0",
   "description": "Kiwi map only points",
-  "main": "dist/index.bundle.js",
+  "main": "index.js",
   "dependencies": {
     "immutable": "^3.8.1",
     "immutable-devtools": "0.0.7",
