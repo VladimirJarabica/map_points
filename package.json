@@ -4,6 +4,7 @@
   "description": "Kiwi map only points",
   "main": "index.js",
   "dependencies": {
+    "babel-register": "^6.22.0",
     "immutable": "^3.8.1",
     "immutable-devtools": "0.0.7",
     "redux": "^3.6.0",

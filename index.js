@@ -1,3 +1,4 @@
+require("babel-register")
 const Immutable = require("immutable")
 
 const installDevTools = require("immutable-devtools")
