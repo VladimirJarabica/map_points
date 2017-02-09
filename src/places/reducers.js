@@ -13,7 +13,9 @@ const setPricesToPlaces = (places, prices) => {
 	
 	console.log("pricesMap", pricesMap)
 	
-	return places.map(place => {
+	return places.map(placeItem => {
+		// Delete prices
+		let place = placeItem.set("price", null)
 		if (pricesMap.has(place.get("id"))) {
 			return place.set("price", pricesMap.get(place.get("id")))
 		}
