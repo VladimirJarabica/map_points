@@ -1,0 +1,21 @@
+{
+  "name": "map_points",
+  "version": "1.0.0",
+  "description": "Kiwi map only points",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirJarabica/map_points.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirJarabica/map_points/issues"
+  },
+  "homepage": "https://github.com/VladimirJarabica/map_points#readme"
+}
