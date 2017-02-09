@@ -1,5 +1,5 @@
-const test = () => {
-	console.log("testing package")
-}
+import init from "./src/main"
 
-export default test
+window.init = init
+
+export default init
