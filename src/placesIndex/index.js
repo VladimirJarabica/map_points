@@ -5,7 +5,6 @@ const index = (placesStore) => {
 	
 	placesStore.subscribe(() => {
 		const { places } = placesStore.getState()
-		
 		mapPlacesIndex.insertPlaces(places)
 	})
 	

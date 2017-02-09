@@ -19,7 +19,6 @@ const placesStore = (options) => {
 			response.json()
 				.then(json => {
 					const places = Map(json.map(place => ([place.id, MapPlace.fromPlainJS(place)])))
-					console.log("places", places)
 					store.dispatch({
 						type: "SET_PLACES",
 						places,

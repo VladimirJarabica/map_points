@@ -17,25 +17,4 @@ export const fetchPrices = (pricesUrl) => {
 				})
 			)
 	}
-	// return fetch(pricesUrl)
-	// 	.then(response => response.json())
-	// 	.then(json => {
-	// 		const prices = List(json.data.map(dataToPrice))
-	// 		dispatch({
-	// 			type: "SET_PRICES_TO_PLACES",
-	// 			prices,
-	// 		})
-	// 	})
-	// return fetch(pricesUrl)
-	// 	.then(response => {
-	// 		response.json()
-	// 			.then(json => {
-	// 				const prices = List(json.data.map(dataToPrice))
-	// 				console.log("prices", prices)
-	// 				store.dispatch({
-	// 					type: "SET_PRICES_TO_PLACES",
-	// 					prices,
-	// 				})
-	// 			})
-	// 	})
 }

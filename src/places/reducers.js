@@ -11,8 +11,6 @@ const setPricesToPlaces = (places, prices) => {
 		}
 	})
 	
-	console.log("pricesMap", pricesMap)
-	
 	return places.map(placeItem => {
 		// Delete prices
 		let place = placeItem.set("price", null)
@@ -33,13 +31,6 @@ const places = (state = Map(), action) => {
 	}
 }
 
-// const state = (state = Map(), action) => {
-// 	switch (action.type) {
-// 		case "SET_PRICES_URL"
-// 	}
-// }
-
 export default combineReducers({
 	places,
-	// state,
 })
