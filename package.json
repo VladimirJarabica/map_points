@@ -5,7 +5,9 @@
   "main": "dist/index.bundle.js",
   "dependencies": {
     "immutable": "^3.8.1",
+    "immutable-devtools": "0.0.7",
     "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "webpack": "^2.2.1"
   },
   "devDependencies": {

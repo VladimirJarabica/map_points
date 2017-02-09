@@ -1,11 +1,11 @@
-import placesStore from "./places/index"
+import placesStoreInit from "./places/index"
 
 const init = (options) => {
-	const { placesUrl } = options
+	const placesStore = placesStoreInit(options)
 	
-	const places = placesStore({
-		placesUrl,
-	})
+	const { dispatch } = placesStore
+	
+	dispatch()
 	
 }
 export default init
