@@ -4,7 +4,7 @@
 
 module.exports = {
 	entry: {
-		index: './index.js',
+		index: ['babel-polyfill', './index.js'],
 	},
 	output: {
 		filename: '[name].bundle.js',

@@ -1,10 +1,30 @@
-import { Map } from "immutable"
+import { Map, List } from "immutable"
 import MapPlace from "./MapPlace"
 import { createStore, applyMiddleware } from "redux"
 import thunk from 'redux-thunk'
 
 import reducers from "./reducers"
-import { fetchPrices } from "./actions"
+
+async function fetchData(placesUrl, pricesUrl, dispatch) {
+	const placesResponse = await fetch(placesUrl)
+	const placesData = await placesResponse.json()
+
+	const places = Map(placesData.map(place => ([place.id, MapPlace.fromPlainJS(place)])))
+	dispatch({
+		type: "SET_PLACES",
+		places,
+	})
+
+	const pricesResponse = await fetch(pricesUrl)
+	const pricesData = await pricesResponse.json()
+
+	const prices = List(pricesData.data.map(dataToPrice))
+	dispatch({
+		type: "SET_PRICES_TO_PLACES",
+		prices,
+	})
+
+}
 
 
 const placesStore = (options) => {
@@ -12,23 +32,11 @@ const placesStore = (options) => {
 		reducers,
 		applyMiddleware(thunk)
 	)
-	
+
 	const { placesUrl, pricesUrl } = options
-	fetch(placesUrl)
-		.then(response => {
-			response.json()
-				.then(json => {
-					const places = Map(json.map(place => ([place.id, MapPlace.fromPlainJS(place)])))
-					store.dispatch({
-						type: "SET_PLACES",
-						places,
-					})
-					window.store = store
-					
-					store.dispatch(fetchPrices(pricesUrl))
-				})
-		})
-	
+
+	fetchData(placesUrl, pricesUrl, store.dispatch)
+
 	return store
 }
 

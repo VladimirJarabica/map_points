@@ -11,11 +11,11 @@ import pointsInit from "./points/index"
 
 const init = (options) => {
 	const placesStore = placesStoreInit(options)
-	
+
 	const placesIndex = placesIndexInit(placesStore)
-	
+
 	const pointsByBounds = pointsInit(placesIndex, options.fromLatLngToDivPixel)
-	
+
 	// const bounds = {
 	// 	wLng: -23.708007812499147,
 	// 	eLng: 27.708007812499716,
@@ -31,4 +31,6 @@ const init = (options) => {
 		placesStore,
 	}
 }
+
+window.init = init
 export default init
