@@ -5,6 +5,11 @@ import thunk from 'redux-thunk'
 
 import reducers from "./reducers"
 
+const dataToPrice = price => (Map({
+	toId: price.mapIdto,
+	price: price.price,
+}))
+
 async function fetchData(placesUrl, pricesUrl, dispatch) {
 	const placesResponse = await fetch(placesUrl)
 	const placesData = await placesResponse.json()
