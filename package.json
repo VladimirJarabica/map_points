@@ -28,7 +28,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib & webpack"
+    "build": "babel src -d lib & webpack",
+    "build-watch": "babel -w src -d lib"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,3 @@
-import init from "./src/main"
+import init from "./src/placesStore/index"
 
 export default init
