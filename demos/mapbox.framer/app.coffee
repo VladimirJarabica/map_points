@@ -61,9 +61,7 @@ mapUI = require "mapUI"
 
 # Map Points
 { fetch } = require "fetch"
-console.log "Fetch loaded"
 { mapPointsInit } = require "mapPoints"
-console.log(mapPointsInit)
 mapPointsInit(window.mapUI.map)
 
 formUI = require "formUI"

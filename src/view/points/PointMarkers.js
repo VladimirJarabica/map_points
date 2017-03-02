@@ -10,6 +10,9 @@ export default class Points {
 	}
 	
 	updatePoints(newPoints) {
+		if (!newPoints.noPricePoints && !newPoints.pricePoints) {
+			return
+		}
 		this.pointMarkers.forEach(marker => {
 			marker.remove()
 		})
