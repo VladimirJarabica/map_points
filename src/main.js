@@ -1,13 +1,10 @@
 import initPlacesStore from "./placesStore"
+import initView from "./view"
 
 const init = (opts, map) => {
-	const { placesStore, getByBounds } = initPlacesStore(opts)
+	const { placesStore, pointsByBounds } = initPlacesStore(opts)
 	
-	placesStore.subscribe(() => {
-		console.log("subscribe", placesStore.getState())
-	})
+	initView(placesStore, pointsByBounds, map)
 }
 
 export default init
-
-// export const placesStore = initPlacesStore
