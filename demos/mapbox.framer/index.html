@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript">
+		// This automatically sets the right viewport scale on mobile devices
+		(function() {
+ 		var scale = 1 / window.devicePixelRatio
+ 		var viewport = "width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no"
+ 		var iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+ 		if (iOS) { viewport += ", shrink-to-fit=no" }
+ 		document.write("<meta name=\"viewport\" content=\"" + viewport + "\">")
+		})()
+		</script>
+
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png">
+		<link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
+		<link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
+
+		<link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="framer/style.css">
+		
+		<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js"></script>
+		<script src="framer/coffee-script.js"></script>
+		<script src="framer/framer.js"></script>
+		<script src="framer/framer.generated.js"></script>
+		<script src="framer/framer.modules.js"></script>
+		<script src="framer/framer.init.js"></script>
+
+	</head>
+	<body>
+		<div id='map-one' class='map'> </div>
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiZnZlcmxvb3AiLCJhIjoiY2lraDd3bzI5MDE4eXVkbTYxb3o5amZ2YiJ9.0oOA8oZrYGPkrWK4cax3Cg';
+			var map = new mapboxgl.Map({
+			    container: 'map-one', // container id
+			    style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+			    center: [-74.50, 40], // starting position
+			    zoom: 9 // starting zoom
+			});
+		</script>
+	</body>
+</html>

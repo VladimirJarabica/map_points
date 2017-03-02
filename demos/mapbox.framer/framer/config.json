@@ -1,0 +1,16 @@
+{
+  "deviceOrientation" : 0,
+  "sharedPrototype" : true,
+  "contentScale" : 1,
+  "deviceType" : "fullscreen",
+  "selectedHand" : "iphone-hands-2",
+  "updateDelay" : 0.3,
+  "deviceScale" : 1,
+  "foldedCodeRanges" : [
+    "{228, 70}",
+    "{449, 77}",
+    "{526, 277}"
+  ],
+  "orientation" : 0,
+  "projectId" : "66823835-BEB6-4CD9-8315-8B862657A2A2"
+}
