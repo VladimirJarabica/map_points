@@ -1,0 +1,820 @@
+.mapboxgl-marker.no-price-point-marker {
+	top: -30px;
+	animation: fadeIn 0.2s linear;
+	cursor: default;
+	z-index: 0;
+}
+
+.mapboxgl-marker.no-price-point-marker:hover {
+	z-index: 3;
+}
+
+.mapboxgl-marker.no-price-point-marker.fade-out {
+	transition: opacity 0.2s;
+	opacity: 0;
+}
+
+.no-price-point-wrapper {
+	position: relative;
+	left: -50%;
+	height: 28px;
+	bottom: 0;
+	transition: bottom 0.2s ease-out;
+}
+
+.no-price-point-wrapper .no-price-point {
+	position: relative;
+	bottom: 0;
+	color: $font-default-color;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.no-price-point-wrapper .no-price-point:after {
+	content: "";
+	width: 8;
+	height: 8;
+	position: absolute;
+	transform: rotate(45deg);
+	background-color: #fff;
+	bottom: -4;
+	left: calc(50% - 4px);
+	box-shadow: 2px 2px 1px 0 rgba(0,0,0,0.1);
+}
+
+.no-price-point-wrapper .no-price-point:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #fff;
+	bottom: -4px;
+	left: calc(50% - 4px);
+	position: absolute;
+	z-index: 2;
+}
+
+.no-price-point-wrapper .no-price-point .no-price-point-content {
+	position: absolute;
+	left: 50%;
+	width: 28px;
+	height: 28px;
+	transform: translate(-50%);
+	transition: opacity 0.2s;
+	background-color: #fff;
+	white-space: nowrap;
+	border-radius: 3px;
+	z-index: 1;
+	box-shadow: 0 2px 14px 0 rgba(0,0,0,0.22), 0 1px 1px 0 rgba(44,73,22,0.18), inset 0 1px 0 0 rgba(255,255,255,0.1);
+	text-align: center;
+}
+
+.no-price-point-wrapper .no-price-point .no-price-point-content .no-price-point-icon {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.no-price-point-wrapper .no-price-point .no-price-point-content-back {
+	position: relative;
+	cursor: pointer;
+	top: 0;
+	max-width: 0;
+	max-height: 28px;
+	background-color: #fff;
+	transition: max-width 0s linear 0.2s, opacity 0.2s;
+	overflow: hidden;
+	z-index: 1;
+	border-radius: 3px;
+	opacity: 0;
+	box-shadow: 0 2px 14px 0 rgba(0,0,0,0.22), 0 1px 1px 0 rgba(44,73,22,0.18), inset 0 1px 0 0 rgba(255,255,255,0.1);
+}
+
+.no-price-point-wrapper .no-price-point .no-price-point-content-back .no-price-point-title {
+	padding-left: 8px;
+	padding-right: 8px;
+	float: left;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.no-price-point-wrapper:hover {
+	height: 33px;
+	bottom: 2px;
+}
+
+.no-price-point-wrapper:hover .no-price-point-content {
+	opacity: 0;
+}
+
+.no-price-point-wrapper:hover .no-price-point-content-back {
+	opacity: 1;
+	max-width: 500px;
+	transition: max-width 0s linear 0s, opacity 0.2s;
+}
+
+
+
+/*
+Price point
+ */
+
+.mapboxgl-marker.price-point-marker {
+    top: -30px;
+    animation: fadeIn 0.2s linear;
+    cursor: default;
+    z-index: 0;
+}
+
+.mapboxgl-marker.price-point-marker:hover {
+    z-index: 3;
+}
+
+.mapboxgl-marker.price-point-marker.fade-out {
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+.price-point-wrapper {
+    position: relative;
+    left: -50%;
+    height: 28px;
+    bottom: 0;
+    transition: bottom 0.2s ease-out;
+}
+
+.price-point-wrapper .price-point {
+    position: relative;
+    bottom: 0;
+    color: #30363d;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.price-point-wrapper .price-point:after {
+    content: "";
+    width: 8;
+    height: 8;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #fff;
+    bottom: -4;
+    left: calc(50% - 4px);
+    box-shadow: 2px 2px 1px 0 rgba(0,0,0,0.1);
+}
+
+.price-point-wrapper .price-point:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    bottom: -4px;
+    left: calc(50% - 4px);
+    position: absolute;
+    z-index: 2;
+}
+
+.price-point-wrapper .price-point .price-point-content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: opacity 0.2s;
+    background-color: #fff;
+    white-space: nowrap;
+    border-radius: 3px;
+    z-index: 1;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.22), 0 1px 1px 0 rgba(44,73,22,0.18), inset 0 1px 0 0 rgba(255,255,255,0.1);
+}
+
+.price-point-wrapper .price-point .price-point-content .price-point-price {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.price-point-wrapper .price-point .price-point-content-back {
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    max-width: 0;
+    max-height: 28px;
+    background-color: #fff;
+    transition: max-width 0s linear 0.2s, opacity 0.2s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 3px;
+    opacity: 0;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.22), 0 1px 1px 0 rgba(44,73,22,0.18), inset 0 1px 0 0 rgba(255,255,255,0.1);
+}
+
+.price-point-wrapper .price-point .price-point-content-back .price-point-title {
+    padding-left: 8px;
+    padding-right: 4px;
+    float: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.price-point-wrapper .price-point .price-point-content-back .price-point-price {
+    background-color: #eeeff3;
+    padding-left: 4px;
+    padding-right: 8px;
+}
+
+.price-point-wrapper .price-point .price-point-content .price-point-price,
+.price-point-wrapper .price-point .price-point-content-back .price-point-price {
+    float: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.price-point-wrapper .price-point .price-point-content .price-point-price span,
+.price-point-wrapper .price-point .price-point-content-back .price-point-price span {
+    font-size: 12px;
+    color: #abb2ba;
+}
+
+.price-point-wrapper .price-point .price-point-content .price-point-price span .price-value,
+.price-point-wrapper .price-point .price-point-content-back .price-point-price span .price-value {
+    font-size: 14px;
+    color: #30363d;
+}
+
+.price-point-wrapper:hover {
+    height: 33px;
+    bottom: 2px;
+}
+
+.price-point-wrapper:hover .price-point-content {
+    opacity: 0;
+}
+
+.price-point-wrapper:hover .price-point-content-back {
+    opacity: 1;
+    max-width: 500px;
+    transition: max-width 0s linear 0s, opacity 0.2s;
+}
+
+.price-point-wrapper:hover .price-point-content-back .price-point-title {
+    padding-right: 6px;
+}
+
+.price-point-wrapper:hover .price-point-content-back .price-point-price {
+    padding-left: 6px;
+}
+
+.price-point-wrapper:hover:active .price-point-content-back,
+.price-point-wrapper:hover:active .price-point-content-back .price-point-price {
+    background-color: #c0c8d1;
+}
+
+.price-point-wrapper:hover:active .price-point:after {
+    background-color: #c0c8d1;
+}
+
+.price-point-wrapper:hover:active .price-point:before {
+    border-top-color: #c0c8d1;
+}
+
+.price-point-wrapper.highlighted .price-point:before {
+    border-top-color: #0097a9;
+}
+
+.price-point-wrapper.highlighted .price-point:after {
+    background-color: #0097a9;
+}
+
+.price-point-wrapper.highlighted .price-point .price-point-content,
+.price-point-wrapper.highlighted .price-point .price-point-content-back {
+    background-color: #0097a9;
+    color: #fff;
+}
+
+.price-point-wrapper.highlighted .price-point .price-point-content .price-point-price span,
+.price-point-wrapper.highlighted .price-point .price-point-content-back .price-point-price span {
+    color: rgba(255,255,255,0.7);
+}
+
+.price-point-wrapper.highlighted .price-point .price-point-content .price-point-price span .price-value,
+.price-point-wrapper.highlighted .price-point .price-point-content-back .price-point-price span .price-value {
+    color: #fff;
+}
+
+.price-point-wrapper.highlighted .price-point .price-point-content-back .price-point-price {
+    background-color: rgba(0,0,0,0.06);
+}
+
+.price-point-wrapper.highlighted .price-point:hover:active .price-point-content-back .price-point-title {
+    background-color: rgba(0,0,0,0.06);
+}
+
+.price-point-wrapper.highlighted .price-point:hover:active .price-point-content-back .price-point-price {
+    background-color: rgba(0,0,0,0.12);
+}
+
+.price-point-wrapper.highlighted .price-point:hover:active:before {
+    border-top-color: #0097a9;
+}
+
+.price-point-wrapper.highlighted .price-point:hover:active:after {
+    background-color: #0097a9;
+}
+
+@-moz-keyframes move-up {
+    0% {
+        bottom: 0px;
+    }
+
+    7% {
+        bottom: 0.106330555542852px;
+    }
+
+    14% {
+        bottom: 1.36588413329711px;
+    }
+
+    21% {
+        bottom: 1.724443786004304px;
+    }
+
+    29% {
+        bottom: 1.972533371156241px;
+    }
+
+    36% {
+        bottom: 1.984247727810591px;
+    }
+
+    43% {
+        bottom: 1.992173209382443px;
+    }
+
+    50% {
+        bottom: 1.997338354237212px;
+    }
+
+    57% {
+        bottom: 2.000534850732501px;
+    }
+
+    64% {
+        bottom: 2.002361222461768px;
+    }
+
+    71% {
+        bottom: 2.003261735920001px;
+    }
+
+    79% {
+        bottom: 2.00355981595663px;
+    }
+
+    86% {
+        bottom: 2.000762506969589px;
+    }
+
+    93% {
+        bottom: 2px;
+    }
+
+    100% {
+        bottom: 2px;
+    }
+}
+
+@-webkit-keyframes move-up {
+    0% {
+        bottom: 0px;
+    }
+
+    7% {
+        bottom: 0.106330555542852px;
+    }
+
+    14% {
+        bottom: 1.36588413329711px;
+    }
+
+    21% {
+        bottom: 1.724443786004304px;
+    }
+
+    29% {
+        bottom: 1.972533371156241px;
+    }
+
+    36% {
+        bottom: 1.984247727810591px;
+    }
+
+    43% {
+        bottom: 1.992173209382443px;
+    }
+
+    50% {
+        bottom: 1.997338354237212px;
+    }
+
+    57% {
+        bottom: 2.000534850732501px;
+    }
+
+    64% {
+        bottom: 2.002361222461768px;
+    }
+
+    71% {
+        bottom: 2.003261735920001px;
+    }
+
+    79% {
+        bottom: 2.00355981595663px;
+    }
+
+    86% {
+        bottom: 2.000762506969589px;
+    }
+
+    93% {
+        bottom: 2px;
+    }
+
+    100% {
+        bottom: 2px;
+    }
+}
+
+@-o-keyframes move-up {
+    0% {
+        bottom: 0px;
+    }
+
+    7% {
+        bottom: 0.106330555542852px;
+    }
+
+    14% {
+        bottom: 1.36588413329711px;
+    }
+
+    21% {
+        bottom: 1.724443786004304px;
+    }
+
+    29% {
+        bottom: 1.972533371156241px;
+    }
+
+    36% {
+        bottom: 1.984247727810591px;
+    }
+
+    43% {
+        bottom: 1.992173209382443px;
+    }
+
+    50% {
+        bottom: 1.997338354237212px;
+    }
+
+    57% {
+        bottom: 2.000534850732501px;
+    }
+
+    64% {
+        bottom: 2.002361222461768px;
+    }
+
+    71% {
+        bottom: 2.003261735920001px;
+    }
+
+    79% {
+        bottom: 2.00355981595663px;
+    }
+
+    86% {
+        bottom: 2.000762506969589px;
+    }
+
+    93% {
+        bottom: 2px;
+    }
+
+    100% {
+        bottom: 2px;
+    }
+}
+
+@keyframes move-up {
+    0% {
+        bottom: 0px;
+    }
+
+    7% {
+        bottom: 0.106330555542852px;
+    }
+
+    14% {
+        bottom: 1.36588413329711px;
+    }
+
+    21% {
+        bottom: 1.724443786004304px;
+    }
+
+    29% {
+        bottom: 1.972533371156241px;
+    }
+
+    36% {
+        bottom: 1.984247727810591px;
+    }
+
+    43% {
+        bottom: 1.992173209382443px;
+    }
+
+    50% {
+        bottom: 1.997338354237212px;
+    }
+
+    57% {
+        bottom: 2.000534850732501px;
+    }
+
+    64% {
+        bottom: 2.002361222461768px;
+    }
+
+    71% {
+        bottom: 2.003261735920001px;
+    }
+
+    79% {
+        bottom: 2.00355981595663px;
+    }
+
+    86% {
+        bottom: 2.000762506969589px;
+    }
+
+    93% {
+        bottom: 2px;
+    }
+
+    100% {
+        bottom: 2px;
+    }
+}
+
+@-moz-keyframes move-down {
+    0% {
+        bottom: 2px;
+    }
+
+    7% {
+        bottom: 1.893669444457148px;
+    }
+
+    14% {
+        bottom: 0.63411586670289px;
+    }
+
+    21% {
+        bottom: 0.275556213995696px;
+    }
+
+    29% {
+        bottom: 0.027466628843759px;
+    }
+
+    36% {
+        bottom: 0.015752272189409px;
+    }
+
+    43% {
+        bottom: 0.007826790617557px;
+    }
+
+    50% {
+        bottom: 0.002661645762788px;
+    }
+
+    57% {
+        bottom: -0.000534850732501px;
+    }
+
+    64% {
+        bottom: -0.002361222461768px;
+    }
+
+    71% {
+        bottom: -0.00326173592px;
+    }
+
+    79% {
+        bottom: -0.00355981595663px;
+    }
+
+    86% {
+        bottom: -0.000762506969589px;
+    }
+
+    93% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@-webkit-keyframes move-down {
+    0% {
+        bottom: 2px;
+    }
+
+    7% {
+        bottom: 1.893669444457148px;
+    }
+
+    14% {
+        bottom: 0.63411586670289px;
+    }
+
+    21% {
+        bottom: 0.275556213995696px;
+    }
+
+    29% {
+        bottom: 0.027466628843759px;
+    }
+
+    36% {
+        bottom: 0.015752272189409px;
+    }
+
+    43% {
+        bottom: 0.007826790617557px;
+    }
+
+    50% {
+        bottom: 0.002661645762788px;
+    }
+
+    57% {
+        bottom: -0.000534850732501px;
+    }
+
+    64% {
+        bottom: -0.002361222461768px;
+    }
+
+    71% {
+        bottom: -0.00326173592px;
+    }
+
+    79% {
+        bottom: -0.00355981595663px;
+    }
+
+    86% {
+        bottom: -0.000762506969589px;
+    }
+
+    93% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@-o-keyframes move-down {
+    0% {
+        bottom: 2px;
+    }
+
+    7% {
+        bottom: 1.893669444457148px;
+    }
+
+    14% {
+        bottom: 0.63411586670289px;
+    }
+
+    21% {
+        bottom: 0.275556213995696px;
+    }
+
+    29% {
+        bottom: 0.027466628843759px;
+    }
+
+    36% {
+        bottom: 0.015752272189409px;
+    }
+
+    43% {
+        bottom: 0.007826790617557px;
+    }
+
+    50% {
+        bottom: 0.002661645762788px;
+    }
+
+    57% {
+        bottom: -0.000534850732501px;
+    }
+
+    64% {
+        bottom: -0.002361222461768px;
+    }
+
+    71% {
+        bottom: -0.00326173592px;
+    }
+
+    79% {
+        bottom: -0.00355981595663px;
+    }
+
+    86% {
+        bottom: -0.000762506969589px;
+    }
+
+    93% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes move-down {
+    0% {
+        bottom: 2px;
+    }
+
+    7% {
+        bottom: 1.893669444457148px;
+    }
+
+    14% {
+        bottom: 0.63411586670289px;
+    }
+
+    21% {
+        bottom: 0.275556213995696px;
+    }
+
+    29% {
+        bottom: 0.027466628843759px;
+    }
+
+    36% {
+        bottom: 0.015752272189409px;
+    }
+
+    43% {
+        bottom: 0.007826790617557px;
+    }
+
+    50% {
+        bottom: 0.002661645762788px;
+    }
+
+    57% {
+        bottom: -0.000534850732501px;
+    }
+
+    64% {
+        bottom: -0.002361222461768px;
+    }
+
+    71% {
+        bottom: -0.00326173592px;
+    }
+
+    79% {
+        bottom: -0.00355981595663px;
+    }
+
+    86% {
+        bottom: -0.000762506969589px;
+    }
+
+    93% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
