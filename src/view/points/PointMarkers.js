@@ -9,7 +9,7 @@ export default class Points {
 		this.pointMarkers = List()
 	}
 	
-	updatePoints(newPoints) {
+	updatePoints(newPoints, showNoPricePoints = false) {
 		if (!newPoints.noPricePoints && !newPoints.pricePoints) {
 			return
 		}
@@ -17,10 +17,12 @@ export default class Points {
 			marker.remove()
 		})
 		this.pointMarkers = List()
-		newPoints.noPricePoints.forEach(point => {
-			const marker = new NoPricePoint(this.map, point)
-			this.pointMarkers = this.pointMarkers.push(marker)
-		})
+		if (showNoPricePoints) {
+			newPoints.noPricePoints.forEach(point => {
+				const marker = new NoPricePoint(this.map, point)
+				this.pointMarkers = this.pointMarkers.push(marker)
+			})
+		}
 		newPoints.pricePoints.forEach(point => {
 			const marker = new PricePoint(this.map, point)
 			this.pointMarkers = this.pointMarkers.push(marker)
