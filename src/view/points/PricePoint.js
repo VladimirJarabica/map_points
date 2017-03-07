@@ -36,13 +36,13 @@ export default class PricePoint extends Point {
 		if (point.mapPlace.price) {
 			let priceFront = document.createElement("div")
 			priceFront.className = "price-point-price"
-			priceFront.innerHTML = "<span>" + point.mapPlace.price + "</span>"
+			priceFront.innerHTML = "<span>" + point.mapPlace.price + "&#8202;$</span>"
 			
 			element.appendChild(priceFront)
 			
 			let priceBack = document.createElement("div")
 			priceBack.className = "price-point-price"
-			priceBack.innerHTML = "<span>" + point.mapPlace.price + "</span>"
+			priceBack.innerHTML = "<span>" + point.mapPlace.price + "&#8202;$</span>"
 			
 			elementBack.appendChild(priceBack)
 		}

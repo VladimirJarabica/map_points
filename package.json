@@ -1,6 +1,6 @@
 {
   "name": "map_points",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Kiwi map only points",
   "main": "lib/main.js",
   "dependencies": {
